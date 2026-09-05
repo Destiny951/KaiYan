@@ -1,16 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "KaiYan",
+  "name": "开演",
   "seo": {
     "metatags": {
       "canonical": "https://docs.kai-yan.com"
     }
   },
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#8C5D12",
+    "light": "#E4B24A",
+    "dark": "#8C5D12"
   },
   "favicon": "/favicon.png",
   "logo": {
@@ -18,20 +18,60 @@
     "dark": "/logo/kaiyan.png"
   },
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "开始使用",
+        "group": "游玩",
         "pages": [
           "index",
-          "quickstart"
+          {
+            "group": "剧本",
+            "expanded": true,
+            "pages": [
+              "play/scripts/start-game",
+              "play/scripts/recommended-actions",
+              "play/scripts/game-menu"
+            ]
+          },
+          {
+            "group": "充值",
+            "expanded": true,
+            "pages": [
+              "play/recharge/action-value",
+              "play/recharge/coins"
+            ]
+          },
+          {
+            "group": "个人中心",
+            "expanded": true,
+            "pages": [
+              "play/profile/index",
+              "play/profile/theme",
+              "play/profile/model"
+            ]
+          },
+          "play/follow-creators",
+          "play/likes-and-favorites",
+          {
+            "group": "问题反馈",
+            "expanded": true,
+            "pages": [
+              "play/feedback/contact-service",
+              "play/feedback/tickets"
+            ]
+          },
+          "play/invite"
         ]
+      },
+      {
+        "group": "创作",
+        "pages": ["create/index"]
       }
     ]
   },
   "navbar": {
     "links": [
       {
-        "label": "打开 KaiYan",
+        "label": "打开开演",
         "href": "https://kai-yan.com"
       }
     ],
@@ -40,18 +80,6 @@
       "label": "开始体验",
       "href": "https://kai-yan.com"
     }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
   },
   "footer": {
     "socials": {
