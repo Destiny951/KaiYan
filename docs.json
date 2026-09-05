@@ -1,0 +1,56 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "KaiYan",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
+  },
+  "favicon": "/favicon.png",
+  "logo": {
+    "light": "/logo/kaiyan.png",
+    "dark": "/logo/kaiyan.png"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "开始使用",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "打开 KaiYan",
+        "href": "https://kai-yan.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "开始体验",
+      "href": "https://kai-yan.com"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/Destiny951/KaiYan"
+    }
+  }
+}
