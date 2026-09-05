@@ -2,6 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "KaiYan",
+  "seo": {
+    "metatags": {
+      "canonical": "https://docs.kai-yan.com"
+    }
+  },
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
