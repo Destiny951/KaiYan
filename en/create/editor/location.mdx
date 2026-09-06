@@ -1,0 +1,37 @@
+---
+title: "Location"
+description: "Give each act a readable place, entry rule, and scene image."
+---
+
+## What it controls
+
+A location describes where the story happens. The same place can change across acts by using a separate configuration for each act.
+
+The example location is **Tidebound Post Office**: a dark lobby in the first act and a doorway with rising water later.
+
+<Frame caption="Chinese UI screenshot: location fields">
+  <img src="/images/creator/editor-location-fields.png" alt="Location panel with location name and per-act configuration" />
+</Frame>
+
+## Location name
+
+| Field | What to write | Example | Player sees it where |
+| --- | --- | --- | --- |
+| Location name | A stable and understandable place name | `Tidebound Post Office` | Top location label, location menu, and details |
+
+Avoid names such as “Scene 1.” Players use the location name to understand where they are.
+
+## Per-act configuration
+
+| Field | What to write | Example | Player sees the result |
+| --- | --- | --- | --- |
+| Description | Observable environment, sounds, and details | `The lobby is lit by an emergency lamp; tide sounds come through the back door.` | Location details and scene narration |
+| Entry condition | The fact required to enter | `The player confirms the letter points toward the old pier.` | It controls access but is not shown as a rule |
+| Location state | What is already true on entry | `Water marks the register desk; Lin Zhou holds the back-door key.` | It changes available actions and performance |
+| Scene image | Image for this act’s version of the place | `Night view of the dark post office` | Main scene background and location details |
+
+If the place changes later, keep the same name and update the act configuration. For example: first `only the emergency lamp is on`; later `water crosses the threshold and wet footprints lead to the back door`.
+
+## Check it
+
+Confirm that every act using the location has a configuration, its description contains observable facts, the entry condition matches the previous act, and the image works as a scene background. Bind the location to the act or players will not naturally enter it.

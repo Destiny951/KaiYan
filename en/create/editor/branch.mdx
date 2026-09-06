@@ -1,0 +1,31 @@
+---
+title: "Branch"
+description: "Send different established facts and choices to different routes."
+---
+
+## What it controls
+
+A branch is a route decision in the editor, not a button that players see. Use it when an earlier act should lead to different next steps based on facts, a player decision, or a current state.
+
+The example branch is **Whether to Visit the Old Pier**. One route follows the clue to the pier; the other leaves a reply at the post office.
+
+<Frame caption="Chinese UI screenshot: branch fields">
+  <img src="/images/creator/editor-branch-fields.png" alt="Branch panel with branch name and exit route strategy" />
+</Frame>
+
+| Field | What to write | Example |
+| --- | --- | --- |
+| Branch name | A useful label for the canvas | `Whether to Visit the Old Pier` |
+| Exit route strategy | The established fact for each connection | `The player has found the salt mark and clearly chooses to visit the old pier.` |
+
+Connect one incoming route and at least two outgoing routes. Write a separate, observable condition for each route. Good conditions say what the player did or what fact is true; they do not say “if the player is clever.”
+
+## What the player sees
+
+The branch card and strategy text are hidden. The player sees different dialogue, location access, items, clues, intelligence, or later endings. If you want a choice to be explicit, write it as a natural action or conversation in the player scene.
+
+## Check it in testing
+
+Trigger every route from a test session. Make sure the routes actually differ, no route has an unconnected exit, and a future fact has not been written as if it already happened.
+
+Next: [Character](/en/create/editor/character) and [Location](/en/create/editor/location).

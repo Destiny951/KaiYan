@@ -1,0 +1,31 @@
+---
+title: "Item"
+description: "Describe what the player can find, carry, inspect, or use."
+---
+
+## What it controls
+
+An item needs more than a name. The player should know what it looks like, why it matters, and what meaningful interaction it supports.
+
+In **Letter from Mist Harbor**, the item is **Undelivered Letter**. Its salt mark points toward a clue without naming the sender.
+
+<Frame caption="Chinese UI screenshot: item fields">
+  <img src="/images/creator/editor-item-fields.png" alt="Item panel with name, ownership, appearance, image, acquisition, and interactions" />
+</Frame>
+
+| Field | What to write | Example | Player sees it where |
+| --- | --- | --- | --- |
+| Item name | A recognizable inventory name | `Undelivered Letter` | Inventory, item details, and story text |
+| Ownership | Who currently holds it | `Player` | It controls whether the item enters the inventory |
+| Appearance | Details the player can observe | `The envelope edge is water-softened; a thin salt ring marks the seal.` | Item details |
+| Image | A visual identifier | `Old envelope with a salt mark` | Inventory tile and item details |
+| Acquisition | When and how it is obtained | `Inspect the register desk and choose to take the letter.` | It controls when the item appears |
+| Interactions | What the player can do with it | `Inspect the salt mark or show it to Lin Zhou.` | Results appear in the story, not as editor rules |
+
+## Write acquisition and interaction
+
+Describe a place, an action, and a result. Give the item one or two meaningful uses: inspect, compare, hand over, or use to make a condition true. Do not let an item solve the entire story by itself.
+
+## Check it
+
+The name and image should identify the item, the appearance should contain observable details, and the acquisition action should be possible in a test session. Confirm that the item enters inventory and that its details or interaction appear as expected.

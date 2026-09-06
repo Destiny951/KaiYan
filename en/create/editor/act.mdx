@@ -1,0 +1,56 @@
+---
+title: "Act"
+description: "Split a long story into testable stages with clear progress and closure."
+---
+
+## What it controls
+
+An act is a stage of the story. It limits which characters and locations may appear, states what changes, and explains when the stage can end.
+
+In **Letter from Mist Harbor**, the first act is **Tide Before Midnight**. It takes the player from receiving the letter to confirming that it came from someone still in the harbor.
+
+<Frame caption="Chinese UI screenshot: act core fields">
+  <img src="/images/creator/editor-act-fields.png" alt="Act panel with act name, characters, locations, progress direction, and closure basis" />
+</Frame>
+
+## Act core
+
+| Field | What to write | Example | Player sees the result |
+| --- | --- | --- | --- |
+| Act name | A name that makes the stage easy to identify | `Tide Before Midnight` | Usually not shown as a page title |
+| Main route | The previous and next connection | `Entry → Tide Before Midnight → Whether to Visit the Old Pier` | The player enters the connected stage |
+| Available characters | People who may appear in this act | `Lin Zhou` | The player can meet these characters |
+| Available locations | Places allowed in the act | `Tidebound Post Office` | The player can use the location |
+| Progress direction | The causal change this stage must create | `Move from receiving the letter to confirming the sender is still in the harbor.` | Appears through scenes and actions |
+| Closure basis | Observable facts and what the next stage inherits | `The salt mark is found; the next stage inherits the old-pier direction.` | The story moves on without inventing a jump |
+
+Write progress as the change, the direction, and the different actions that can reach it. Write closure as normal completion, early exit, and inherited facts. “Task complete” is not enough; state what the player can actually observe.
+
+## Foreshadowing
+
+| Field | Example |
+| --- | --- |
+| Foreshadowing name | `Salt mark on the envelope` |
+| Content | `Salt appears only on the edge facing the old pier.` |
+| Effect | `At the old pier, the tide mark matches the envelope.` |
+
+## Events inside an act
+
+| Field | Example |
+| --- | --- |
+| Event summary | `Lin Zhou denies seeing the letter; the player checks the register; the time of delivery is confirmed.` |
+| Suggested turns | `2–5 turns` |
+| People | `Lin Zhou` |
+| Location | `Tidebound Post Office` |
+| Narrative intent | `Show that the letter was deliberately placed.` |
+| Entry situation | `The player holds the letter in the dark lobby.` |
+| Required question | `Was it placed tonight?` |
+| Allowed result boundary | `Confirm delivery time, but do not reveal the sender’s identity yet.` |
+
+These are background fields. The player experiences the result through dialogue, observations, clues, and changed access—not through the field labels.
+
+## Player-facing check
+
+If the act allows a player-visible location, character, item, clue, intelligence, or state, open the corresponding player page in a test session and confirm when it appears. The act name alone is not enough to explain what the player sees.
+
+Next: [Branch](/en/create/editor/branch).

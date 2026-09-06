@@ -1,0 +1,39 @@
+---
+title: "Status Component"
+description: "Turn a changing condition into a range, changes, and player feedback."
+---
+
+## What it controls
+
+A status component represents something that changes over time: alertness, trust, injury, or time pressure. In **Letter from Mist Harbor**, **Tide Countdown** rises as the player spends time in the post office.
+
+<Frame caption="Chinese UI screenshot: status component fields">
+  <img src="/images/creator/editor-status-fields.png" alt="Status panel with range, initial value, change rules, visibility, and change notice" />
+</Frame>
+
+## Values and changes
+
+| Field | What to write | Example | Player sees the result |
+| --- | --- | --- | --- |
+| Component name | A name both writer and player can understand | `Tide Countdown` | Visible in the bound character details |
+| Range | Minimum and maximum | `0–100` | The range itself is not shown |
+| Initial value | The starting value | `20` | Current value can show as `20` when visible |
+| Range reactions | What different ranges mean in the scene | `0–40: time remains; 41–70: tide sounds closer; 71–100: leave soon.` | Behavior and story results reflect it |
+| Increase | Amount added | `15` | The displayed value rises when visible |
+| Increase condition | A concrete event that raises it | `The player stays one turn without checking the register.` | A change can trigger a notice |
+| Decrease | Amount removed | `10` | The displayed value falls when visible |
+| Decrease condition | A concrete event that lowers it | `The player finds the old-pier clue and leaves immediately.` | A change can trigger a notice |
+
+## Visibility and binding
+
+| Field | Example | Player-facing result |
+| --- | --- | --- |
+| Visible to player | `Yes` | The player can see the name and current value |
+| Change notice | `The tide crosses the threshold; you have less time.` | A short message appears with the change |
+| Bound character | `Player character` | The status appears in that character’s details |
+
+Write conditions as facts the test can reproduce, not “when the mood is tense.” A hidden status can still change reactions, but the player will not see its number.
+
+## Check it
+
+Set a clear range, initial value, positive and negative conditions, reactions, visibility, notice, and character binding. Test the initial display and at least one change in both directions.

@@ -1,0 +1,27 @@
+---
+title: "Intelligence"
+description: "Give the player a confirmed fact at the right moment."
+---
+
+## What it controls
+
+Intelligence is a fact that has been confirmed and can be known by a character. A clue is evidence; intelligence is the explanation or confirmation that follows.
+
+The example is **The Sender Has Not Left the Harbor**. It appears only after the salt mark and the recent delivery record are confirmed.
+
+<Frame caption="Chinese UI screenshot: intelligence fields">
+  <img src="/images/creator/editor-intelligence-fields.png" alt="Intelligence panel with content, reveal act, knowing characters, and reveal condition" />
+</Frame>
+
+| Field | What to write | Example | Player sees it where |
+| --- | --- | --- | --- |
+| Intelligence name | A title for the confirmed fact | `The Sender Has Not Left the Harbor` | Intelligence menu and details |
+| Content | The fact now known to be true | `The register shows the letter was placed after 9 p.m.; the sender is still in the harbor.` | Intelligence details and related story text |
+| Narration may reveal | Whether narration can state it directly | `No; let Lin Zhou reveal it first.` | It guides how the fact enters the scene |
+| Reveal act | The stage where confirmation is possible | `Tide Before Midnight` | It controls timing |
+| Knowing characters | People who already know the fact | `Lin Zhou` | It guides what the character can say or hide |
+| Reveal condition | What must happen before confirmation | `The player sees the salt mark and checks the after-9 p.m. register entry.` | It controls when the fact enters the player record |
+
+## Build the chain
+
+Create the clue first, then define the confirmed fact, its timing, and the characters who know it. In a test session, confirm that the fact is absent before the reveal and can be reviewed afterward.
