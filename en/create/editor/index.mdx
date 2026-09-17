@@ -9,7 +9,7 @@ description: "Understand the canvas, node library, field panel, and visibility c
 - **Node Library** opens from **Add Node** and contains the story components.
 - **Field Panel** opens when you select a node and contains its content and relationships.
 
-The top actions have different jobs: **Test**, **Save**, and **Submit for Review** are workflow actions; import and export are for moving editor content.
+The top actions have different jobs: **Test**, **Save**, and **Submit for Review** are workflow actions; import and export back up or move editor content between drafts.
 
 ## The running example
 
@@ -36,8 +36,22 @@ For example, **Salt mark on the envelope** is visible evidence and belongs in th
   <img src="/images/creator/editor-start-fields.png" alt="Script entry panel with title, summary, background, opening, and background-rule fields" />
 </Frame>
 
+## Import and export
+
+- **Export** saves the current draft's editor content to a file for backup or for moving to another draft;
+- **Import** writes a file back into the current draft. If there are unsaved changes, the editor first warns that they will be overwritten; fields, components, or image references incompatible with the current version are skipped, and the import reports what was ignored.
+
+Import and export only move editor content; they do not change the review or publication status shown in Script Management.
+
 ## A useful editing order
 
 Select the correct node, fill required fields, decide whether each sentence is for the player or for story control, bind relationships, and save before moving on. After writing, check the player-facing page rather than judging the canvas alone.
 
-Continue with [Script Entry](/en/create/editor/start), then open only the component pages your story needs.
+## Don't mix four kinds of content
+
+- **Player-visible text** should read like story, hints, or reference, not author notes;
+- **Background rules** should state facts, boundaries, and conditions, not “write a great scene”;
+- **Flow relationships** should express who connects to whom, in which act, and when something is revealed;
+- **State changes** should describe observable consequences, not just “the value went up.”
+
+Continue with [Script Entry](/en/create/editor/start), then open only the component pages your story needs. For how nodes connect and which relationships are exclusive, see [Node Connections](/en/create/editor/connections); for the fields that block testing, see [Required Fields and Blockers](/en/create/editor/required-fields).

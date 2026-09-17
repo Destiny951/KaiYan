@@ -13,15 +13,44 @@ The example is **The Sender Has Not Left the Harbor**. It appears only after the
   <img src="/images/creator/editor-intelligence-fields.png" alt="Intelligence panel with content, reveal act, knowing characters, and reveal condition" />
 </Frame>
 
+## Content
+
 | Field | What to write | Example | Player sees it where |
 | --- | --- | --- | --- |
 | Intelligence name | A title for the confirmed fact | `The Sender Has Not Left the Harbor` | Intelligence menu and details |
 | Content | The fact now known to be true | `The register shows the letter was placed after 9 p.m.; the sender is still in the harbor.` | Intelligence details and related story text |
 | Narration may reveal | Whether narration can state it directly | `No; let Lin Zhou reveal it first.` | It guides how the fact enters the scene |
+
+The content becomes a fact the player can know, but it is not shown as soon as the node is created. It appears in the intelligence menu only after the reveal condition holds and the fact enters the current story state.
+
+## Reveal and knowing
+
+| Field | What to write | Example | Player sees it where |
+| --- | --- | --- | --- |
 | Reveal act | The stage where confirmation is possible | `Tide Before Midnight` | It controls timing |
 | Knowing characters | People who already know the fact | `Lin Zhou` | It guides what the character can say or hide |
 | Reveal condition | What must happen before confirmation | `The player sees the salt mark and checks the after-9 p.m. register entry.` | It controls when the fact enters the player record |
 
+Do not select every character as a knower. What a character knows directly shapes what they can say, what they hide, and who the player gets the answer from.
+
 ## Build the chain
 
-Create the clue first, then define the confirmed fact, its timing, and the characters who know it. In a test session, confirm that the fact is absent before the reveal and can be reviewed afterward.
+1. Write the evidence the player observes first as a [clue](/en/create/editor/clue);
+2. Define the confirmed fact here and set its reveal timing;
+3. Bind the characters who already know it, so later dialogue and actions have a basis.
+
+For example, the player first sees “salt marks on the envelope edge,” then confirms through the register that “the sender has not left the harbor.” The first is a clue; the second is intelligence. Do not write both stages as one record.
+
+In a test session, confirm that the fact is absent before the reveal and can be reviewed afterward.
+
+<Note>
+  Required fields: intelligence name and content, plus a single reveal act. Missing values block testing and review; see [Required Fields and Blockers](/en/create/editor/required-fields).
+</Note>
+
+## Check it
+
+- The content states a fact that is already true;
+- The reveal act exists and is connected to the main route;
+- The reveal condition can be reached through player actions or story events;
+- Only characters who really know the fact are bound;
+- A test confirmed the fact does not appear before the reveal, can be reviewed afterward, and is not spoken early by a character.

@@ -7,16 +7,16 @@ description: "Take a script from draft to test, review, and publication."
 
 Use this order when creating a script:
 
-1. **Create a draft** from [Script Management](/en/create/management).
-2. **Set the entry point**: title, summary, background, opening, and protagonist.
-3. **Build the story** with acts, branches, characters, locations, items, clues, intelligence, status components, and endings.
-4. **Save and clear blockers**: required fields, links, and relationships must be complete before a useful test.
-5. **Test as a player**: read the background, send speech and actions, try the routes, and reach an ending.
-6. **Revise and test again** after every meaningful change.
-7. **Submit for review** with a version label.
-8. **Wait for the status** to become published; submitting is not the same as publishing.
+This chapter uses an invented example, **Letter from Mist Harbor**: Shen Yao receives an undelivered letter at the Tidebound Post Office, finds the salt mark on the envelope, confirms that the sender is still in the harbor, and decides whether to go to the old pier. Treat it as a practice sample; you do not need to reuse the name or story in your own work.
 
-This chapter uses an invented example, **Letter from Mist Harbor**. Shen Yao receives an undelivered letter at the Tidebound Post Office, finds the salt mark on the envelope, confirms that the sender is still in the harbor, and decides whether to go to the old pier.
+1. **Create a draft** from [Script Management](/en/create/management) and select **New Script**.
+2. **Set the entry point**: complete the [Script Entry](/en/create/editor/start) with the title, summary, background, opening, and protagonist.
+3. **Build the story**: open the [Script Editor](/en/create/editor) and add acts, branches, characters, locations, items, clues, intelligence, status components, and endings, then connect them to express the story.
+4. **Save and clear blockers**: select **Save** and confirm the saved state. The editor lists required fields, missing connections, and unbound relationships as blockers; see [Required Fields and Blockers](/en/create/editor/required-fields) for the list.
+5. **Test as a player**: select **Test**, create a new test session, and walk through the opening, input, branches, state changes, and ending from the player page.
+6. **Revise and test again**: when text, conditions, or routes are wrong, fix and save in the editor, then test again.
+7. **Submit for review**: select **Submit for Review**, enter a version label, and confirm.
+8. **Wait for the status**: the work enters **In Review**. Only approval produces a publishable version; submitting is not the same as publishing.
 
 <Frame caption="Chinese UI screenshot: blockers before testing">
   <img src="/images/creator/editor-blockers.png" alt="Editor showing missing required fields, links, and node content in a blockers panel" />
@@ -24,22 +24,51 @@ This chapter uses an invented example, **Letter from Mist Harbor**. Shen Yao rec
 
 ## Draft, test, review, publish
 
-Create a draft, complete the entry point, and add at least one act. Then add only the components the story needs. The editor’s required fields and connections are the foundation for testing, not a quality score.
+### 1. Create a draft
 
-Select **Test** and then **New Test Session**. Read from the player view and check that clues appear after the right action, intelligence is not revealed too early, state changes make sense, and the ending appears only after its facts are true.
+Select **New Script** on the management page to create a draft that belongs only to you. A draft can start with just a Script Entry and grow node by node; you do not have to write everything at once.
+
+### 2. Complete the entry, then build the story
+
+The Script Entry introduces the work, while acts and other nodes make the story run. The recommended order is to write the summary, story background, and opening first, then add at least one act, and afterwards add characters, locations, clues, intelligence, status components, branches, and endings as needed.
+
+The editor's required fields and connections are the foundation for testing, not a quality score. Complete the structure first, then observe what the player actually sees in a test. Covers, scene images, portraits, item images, and ending images have fixed size, format, and transparency rules, documented in the image section of each node page.
+
+### 3. Test from the player's view
+
+Select **Test** and then **New Test Session**. Read from the story background and send speech and actions like a normal player instead of only checking the canvas. Watch for:
+
+- Whether the opening text connects naturally to the background;
+- Whether the player knows where they are and what they can do;
+- Whether clues appear after the right action;
+- Whether intelligence is revealed only after the evidence appears;
+- Whether state changes come with understandable text or behavior;
+- Whether the ending appears only after its expected facts are true.
 
 <Frame caption="Chinese UI screenshot: test session dialog">
   <img src="/images/creator/editor-test-dialog.png" alt="Editor test session dialog with a button to create a new test session" />
 </Frame>
 
-After testing, select **Save** and confirm the saved state. Select **Submit for Review**, enter a label such as **First playable version**, and confirm. Use Script Management to track Draft, In Review, Unpublished, or Published.
+### 4. Revise, save, test again
+
+After a test reveals a problem, return to the editor and fix the node. Save after every change, confirm the top status shows saved, and then start the next test round. Do not treat "the canvas looks connected" as a passing test; walk the result from the player page.
+
+### 5. Submit for review
+
+When the test result is confirmed, select **Submit for Review**. The dialog shows existing version labels and asks for a **new version label** that lets you tell this submission apart later, such as "first version" or "chapter one revision". Confirming sends the work into review.
 
 <Frame caption="Chinese UI screenshot: submit for review">
   <img src="/images/creator/editor-review-dialog.png" alt="Submit for review dialog with an existing version label, new label field, cancel, and confirm buttons" />
 </Frame>
 
 <Warning>
-  Review approval and publication are separate states. Only a Published status means players can find the version in the catalog.
+  Submitting for review does not mean the review has passed or the work is published. Track the state on the management page; if a submission is returned, fix the draft according to the feedback, test again, and resubmit.
 </Warning>
 
-Next, read [Script Editor](/en/create/editor) and then fill the nodes in the order that suits your story.
+### 6. Publish after approval
+
+Approval and publication are separate states. Only a **Published** status on the management page means players can find and start the version in the catalog. What you can explicitly do on the creator page is submit for review; approval and publication follow the management page, so do not read **Confirm submission** as automatic publishing.
+
+After publication, open the work card from [Script Management](/en/create/management) to see play count, average turns, favorites, likes, and completions. To revise later, create a new draft from the published version and fix, test, and resubmit it instead of overwriting the version players are playing.
+
+Next, start with the [Script Editor](/en/create/editor): learn the canvas, node library, field panel, and field colors, then fill the nodes one by one.

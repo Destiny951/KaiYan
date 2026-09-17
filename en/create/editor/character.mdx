@@ -23,9 +23,31 @@ In **Letter from Mist Harbor**, the main non-player character is **Lin Zhou**, t
 | Age | A detail consistent with the character’s life | `32` | Character details |
 | Act portraits | Images for meaningful changes | `Work coat in the post office; windblown collar at the old pier` | Scene, dialogue avatar, and details |
 
-Keep the name and identity consistent. Add a new portrait only when the character’s state or time really changes.
+Keep the name and identity consistent, and enter age as digits only (for example `32`); “32 years old” or a spelled-out number fails validation. Add a new portrait only when the character’s state or time really changes.
+
+### How to fill the basic profile
+
+- Keep the name consistent; do not change how the character is addressed between acts;
+- Write the identity as a relationship the player can understand, not an internal shorthand only the author knows;
+- Match age to the character's experience and way of speaking;
+- Add a portrait only when the character's state or time really changes, not one per act by default.
+
+### Portrait specs and production
+
+Portraits appear in scenes, dialogue avatars, and character details. Besides a default portrait, you can set a portrait for a specific act; an act without its own portrait falls back to the default.
+
+- **Size and scaling**: vertical `768×1024`. The editor scales to that size on upload; when the ratio does not match, it fits the whole image inside and pads the rest with transparency.
+- **Frame**: a **mid-shot from the top of the head to mid-thigh**; do not draw below the knees or use a full-body image. Do not crop the top of the head, arms, or upper-body clothing.
+- **Background and transparency**: use a `PNG` or `WebP` with a real transparent background (alpha channel), not a white, green-screen, or scene background; the editor does not remove backgrounds for you.
+- **Format and size**: `PNG`, `JPEG`, or `WebP`, under `4MB`; prefer `PNG` or `WebP` when transparency must be preserved.
+- **Cross-act consistency**: keep identity, face, hair, and clothing cues consistent across acts, and change only the confirmed outfit, light, or pose.
+- **Prompt**: state a real transparent background, the mid-shot framing, and nothing below the knees, and exclude green screen, white background, scene, ground shadow, text, watermark, and extra characters.
 
 ## Deeper settings
+
+<Warning>
+  These deeper settings apply to non-player characters only. If the character is selected as the protagonist in [Script Entry](/en/create/editor/start), the platform removes core desire, breaking point, usual methods, public persona, and the three speaking-style fields on save, keeping only name, identity, gender, age, and act portraits. Put protagonist behavior rules in story control instead.
+</Warning>
 
 These guide the story but are not displayed as editor instructions:
 
@@ -43,10 +65,22 @@ Write behaviors a player can notice rather than labels such as “brave” or �
 
 ## Act goals
 
-For **Tide Before Midnight**, an example goal is: `Confirm whether Shen Yao noticed the salt mark, then decide whether to hand over the old-pier key.` The goal guides the character’s conversations but is not a task list shown to the player.
+Fill a goal for each act the character appears in. For **Tide Before Midnight**, an example goal is: `Confirm whether Shen Yao noticed the salt mark, then decide whether to hand over the old-pier key.` Act goals are background fields: the player never sees them as a task list, but they keep the character's direction stable across different conversations in the same act, so the character does not forget the problem they are trying to solve.
 
 ## From fields to the game page
 
-The player sees the name, profile, portrait, dialogue, actions, and—if bound—a visible state in the character details. A character must also be bound to an act; simply creating the node does not make the person appear.
+1. **Name, identity, age, and gender** let the player recognize the person in the character menu;
+2. **The portrait** lets the player see the person in scenes and beside dialogue;
+3. **Deeper settings** show through the character's dialogue, actions, and reactions under pressure;
+4. If the character is bound to a visible state component, its name and current value appear in the character details;
+5. Whether the character can appear in an act also depends on binding them to that act; creating the node alone does not put them on stage.
+
+## Check it
+
+- Name and age are filled in;
+- The profile details the player needs do not contradict each other;
+- For non-player characters, deeper settings describe behavior and reactions, not vague adjectives;
+- The character is bound to an act where the story actually happens;
+- At least one test confirmed how the character appears in the character menu and beside dialogue.
 
 Next: [Location](/en/create/editor/location).

@@ -20,9 +20,40 @@ The example branch is **Whether to Visit the Old Pier**. One route follows the c
 
 Connect one incoming route and at least two outgoing routes. Write a separate, observable condition for each route. Good conditions say what the player did or what fact is true; they do not say “if the player is clever.”
 
+## How to build a branch
+
+1. Connect one incoming route from the previous act;
+2. Connect the branch to two or more later acts or endings;
+3. Write a separate condition for each outgoing route;
+4. Check that the routes differ and that no route always leads to the same place;
+5. Trigger every route in a test session and confirm the player page really differs.
+
+## Write facts, not vibes
+
+A condition states what has already happened, not what would be more exciting:
+
+- **Good**: `The player found the salt mark and clearly chooses to visit the old pier.`
+- **Good**: `The player leaves the letter at the post office and chooses to wait.`
+- **Avoid**: `If the player is clever, go to the good ending.`
+- **Avoid**: `Choose the most suitable route from the player's tone.`
+
+When a condition depends on a clue, intelligence, or state, say whether the player saw the evidence or already understood the fact; do not treat the two as the same.
+
+## Common branch mistakes
+
+- No incoming or no outgoing route;
+- An outgoing route has no condition, so a test cannot tell why it was taken;
+- Two routes describe the same result with different titles;
+- A fact is written as already true before it happens;
+- The branch is used as an ending, so the story stops before the player is done.
+
 ## What the player sees
 
 The branch card and strategy text are hidden. The player sees different dialogue, location access, items, clues, intelligence, or later endings. If you want a choice to be explicit, write it as a natural action or conversation in the player scene.
+
+<Note>
+  A branch has no required fields, but every exit route needs a selection rule; without one, a test cannot tell why the route was taken. See [Required Fields and Blockers](/en/create/editor/required-fields).
+</Note>
 
 ## Check it in testing
 

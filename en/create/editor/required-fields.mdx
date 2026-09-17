@@ -1,0 +1,52 @@
+---
+title: "Required Fields and Blockers"
+description: "The fields and inputs that actually block testing and review."
+---
+
+## Required fields, not writing advice
+
+The “Check it” sections on the node pages are writing-quality advice. The fields below are what actually block **Test** and **Submit for Review**. When one is missing, the editor produces no testable version and lists the field as a blocker.
+
+| Node | Unconditionally required fields |
+| --- | --- |
+| Script Entry | Title, summary, language, story background, protagonist, story control |
+| Act | Title, act goal, act resolution, act events |
+| Character | Name, age |
+| Location | Name |
+| Item | Name |
+| Clue | Name |
+| Intelligence | Name, content |
+| Status component | Name, minimum, maximum, initial value, increase amount, increase condition, decrease amount, decrease condition, value ranges, player visibility, change notice |
+| Ending | Ending title |
+| Branch | No required fields, but every exit needs a selection rule |
+
+### Conditionally required
+
+- For Script Entry, choosing **Join an existing series** requires a series, and **New series** requires a series name. Do not fill both.
+- For an ending, choosing the **global check** trigger mode requires a trigger condition.
+
+## Connection checks
+
+Beyond fields, the editor checks how nodes connect:
+
+- The Script Entry must connect to exactly one act;
+- Every act needs a main-route exit, and every route must eventually reach an ending;
+- Intelligence must have a single reveal act;
+- A status component must bind a single character;
+- An item belongs either to a character or to a scene, not both;
+- A clue has exactly one source: an act, a character, or an item.
+
+Fix the story structure rather than swapping connection directions just to pass the check. See [Node Connections](/en/create/editor/connections) for the full direction and exclusivity rules.
+
+## Common input errors
+
+- **Tag outside the platform genres**: only Mystery, Xianxia, Campus, Fantasy, Romance, Workplace, Science fiction, Urban, Apocalypse, and Historical are allowed, at most two;
+- **Age is not digits only**: enter an Arabic numeral such as `32`; “32 years old” or a spelled-out number fails validation;
+- **Status value out of range**: the minimum cannot be below `-1000`, the maximum cannot exceed `1000`, and the minimum must be less than the maximum;
+- **Status ranges are not continuous**: ranges must meet end to end and cover all the way to the maximum.
+
+## When the check runs
+
+Selecting **Test** and creating a test session runs the blocker check first. If anything blocks, no session is created and the page lists the problem type and location; fix the items and create the session again. **Submit for Review** uses the same check, so clear blockers during testing.
+
+Image fields are not part of the required-field check, but they have their own size, format, and transparency rules, documented in the image section of [Script Entry](/en/create/editor/start), [Location](/en/create/editor/location), [Character](/en/create/editor/character), [Item](/en/create/editor/item), and [Ending](/en/create/editor/ending).

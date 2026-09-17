@@ -1,0 +1,42 @@
+---
+title: "Node Connections"
+description: "How characters, locations, items, clues, and status components take effect through connections, and which relationships are exclusive."
+---
+
+## Relationships are not prose
+
+The editor uses connections between nodes to decide who appears in an act, who holds an item, and where a clue comes from. Writing “the letter belongs to Lin Zhou” in the text does not create a relationship; only the matching connection on the canvas does. Confirm the connections before writing the prose.
+
+There are two kinds of connection: an **exclusive relationship** can have only one target at a time, and changing it replaces the old connection; an **additive relationship** can connect several targets at once. Do not swap directions just to pass a check—if your intent does not match the table below, change the story structure instead.
+
+## Connection table
+
+| Connection | Purpose | Rule |
+| --- | --- | --- |
+| Script Entry → Act | The first act after the entry | Exactly one |
+| Act → Act / Branch / Ending | The act's main-route exit | Exactly one per act, choose one kind |
+| Branch → Act / Ending | The branch's routes | Two or more |
+| Character → Act | The character appears in this act | Additive; the same character may connect to several acts |
+| Location → Act | The act takes place here | Additive; the same location may serve several acts |
+| Item → Character | The character holds the item | Choose one of two; exclusive with Item → Act |
+| Item → Act | The item sits in this act | Choose one of two; exclusive with Item → Character |
+| Clue → Act / Character / Item | Where the clue comes from | Choose exactly one |
+| Intelligence → Act | The intelligence's reveal act | Exactly one |
+| Status component → Character | Whose status this tracks | Exactly one; the protagonist can be the target |
+
+## Changing an exclusive relationship
+
+Item ownership, clue source, intelligence reveal act, status binding, and the main-route exits of the entry and each act are all exclusive. When ownership changes, replace the old connection with the new one; do not keep both, and do not simulate a replacement by disconnecting and reconnecting.
+
+A character appearing in several acts, a location serving several acts, multiple branch exits, and clues, intelligence, and items each pointing at the same act are additive—they do not replace one another.
+
+## Common connection mistakes
+
+- The Script Entry connects to several acts, or to none;
+- An act has no main-route exit, so a route stops halfway;
+- A route never reaches an ending;
+- Intelligence has no reveal act, or a status component has no bound character;
+- An item is both held by a character and placed in an act, or a clue comes from two sources;
+- The prose already puts a character on stage or transfers an item, but the canvas has no matching connection.
+
+Connections, required fields, and image specs are three different checks: this page covers connections, [Required Fields and Blockers](/en/create/editor/required-fields) covers fields, and image specs live on their node pages.

@@ -82,7 +82,9 @@
                   "create/editor/clue",
                   "create/editor/intelligence",
                   "create/editor/status",
-                  "create/editor/ending"
+                  "create/editor/ending",
+                  "create/editor/required-fields",
+                  "create/editor/connections"
                 ]
               },
               "create/management"
@@ -149,7 +151,9 @@
                   "en/create/editor/clue",
                   "en/create/editor/intelligence",
                   "en/create/editor/status",
-                  "en/create/editor/ending"
+                  "en/create/editor/ending",
+                  "en/create/editor/required-fields",
+                  "en/create/editor/connections"
                 ]
               },
               "en/create/management"

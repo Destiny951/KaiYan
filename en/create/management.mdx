@@ -5,15 +5,26 @@ description: "Review drafts, review status, versions, and published script data.
 
 ## What this page is for
 
-Script Management is the starting point for creating a draft, searching scripts, filtering by status, continuing an edit, and opening data for published work.
+After entering the creator area, the top of the page shows the **script list** and its current count. This is the entry point for everything: create a draft, search scripts, filter by status, continue an edit, and open published data.
 
 <Frame caption="Chinese UI screenshot: script list and draft card">
   <img src="/images/creator/creator-workspace.png" alt="Script Management page with search, status filters, a draft card, and a New Script button" />
 </Frame>
 
-Each card can show a cover and title, status, series or chapter, version label, relevant time, and a more-actions button. A draft can be edited or deleted. A published script can be used as the starting point for a new draft instead of changing the live version directly.
+## What each card shows
+
+Each card usually contains:
+
+- **Cover and title**: used to identify the work; without a cover, the card shows the first character of the title;
+- **Status**: **Draft**, **In Review**, **Published**, or **Unpublished**;
+- **Series or chapter information**: series works show the series and chapter;
+- **Version label**: published works show the current version;
+- **Time**: drafts show the last save time, published works show the publish time, and works in review show the submission time;
+- **More actions**: a draft can be edited or deleted; a work in review can open its draft; a published work can start a new draft from an existing version.
 
 ## Filter and search
+
+Status filters do not modify the work; they only change what the list shows:
 
 | Filter | Use it when |
 | --- | --- |
@@ -27,12 +38,37 @@ Search can use the script title or series name. If no card appears, clear both t
 
 ## Published data
 
-Selecting a published card opens a data panel with play count, average turns, favorites, likes, and completions.
+Selecting a published card opens a data panel with:
+
+- Play count;
+- Average turns per play;
+- Favorites;
+- Likes;
+- Completions.
 
 <Frame caption="Chinese UI screenshot: published script metrics">
   <img src="/images/creator/creator-analytics.png" alt="Published script metrics showing plays, average turns, favorites, likes, completions, and estimated income" />
 </Frame>
 
-The current panel keeps an **Estimated Income** area but clearly says it is not supported yet. Do not treat it as paid income or infer a split, settlement date, or withdrawal status from play count.
+The numbers in the screenshot are live data captured locally, not a product promise. The panel also keeps an **Estimated Income** area, but it clearly says it is not supported yet, so you cannot get an amount, split, settlement date, or withdrawal status from here.
 
-If creator revenue is formally launched later, this area can explain the source of revenue, payable and settled amounts, settlement cycle, and permitted withdrawal method. Until those rules are published, leave the numbers to the product page.
+## Revenue share: now and later
+
+The management page currently has no usable revenue settlement data. If the platform formally opens creator revenue later, this page can grow to explain:
+
+1. Which works or play activity produce revenue;
+2. The currently shareable and already settled amounts;
+3. The settlement cycle, status, and detail;
+4. The withdrawal methods allowed by platform rules.
+
+These details should wait for the platform's formal rules. Do not treat **Estimated Income** as money received, and do not estimate revenue from play count yourself.
+
+## How management and the editor work together
+
+- Enter the editor from a **Draft** card to fill fields and connections;
+- After **Save** in the editor, the card keeps the last save time;
+- After a passing test, **Submit for Review** from the editor changes the status to **In Review**;
+- If a submission is returned, fix the draft and resubmit;
+- After approval and publication, check the current version and its data from the management page.
+
+The management page does not merge "submit for review" and "publish automatically" into one action.

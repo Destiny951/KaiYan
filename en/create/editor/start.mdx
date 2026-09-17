@@ -21,11 +21,31 @@ This guide uses **Letter from Mist Harbor**: Shen Yao receives an undelivered le
 | Series setting | Whether the work is standalone or part of a series | `Standalone` | Details page type and series information |
 | Main route | The first act after the entry | `Tide Before Midnight` | The setting itself is hidden; the player enters that act |
 | Summary | The premise, place, problem, and hook | `At the Tidebound Post Office, you receive a letter addressed to you. The tide is rising, and the address points to the old pier.` | Catalog and details |
-| Tags | Topic or mood labels | `Mystery`, `Modern` | Script card and filters |
+| Tags | Topic or mood labels | `Mystery`, `Urban` | Script card and filters |
 | Language | The main language for the work | `Simplified Chinese` | It guides the performance; the setting label is not shown in the game |
 | Cover | A recognizable image | `Night view of the Tidebound Post Office` | Catalog, details, and management card |
 | Script overview | Six short layers describing the whole work | `A short modern mystery from a letter to a reply under the lighthouse.` | Not shown directly; keeps the story on course |
 | Story control | Rules for player input, boundaries, waiting, and closure | `Only confirmed player actions count; clue before intelligence; close after the reply.` | Not shown directly; shapes responses |
+| Worldview | Shared rules, history, common knowledge, and boundaries | `The old pier lamp lights only when someone is landing` | Not shown directly; constrains the whole performance |
+| Opening location | Where the player first enters the story | `Tidebound Post Office` | The setting is hidden; the player starts there, and an empty value falls back to the first location bound to the first act |
+
+<Note>
+  **Tags** are limited to the platform genres: Mystery, Xianxia, Campus, Fantasy, Romance, Workplace, Science fiction, Urban, Apocalypse, and Historical, with at most two selected. A term outside this list fails the test and review checks and blocks the workflow.
+</Note>
+
+<Note>
+  The **required** fields on this page are title, summary, language, story background, protagonist, and story control. Missing values block testing and review; see [Required Fields and Blockers](/en/create/editor/required-fields) for the complete list.
+</Note>
+
+### Cover specs and production
+
+The cover appears in the catalog, details page, and management card; without one, the card shows the first character of the title.
+
+- **Size and scaling**: the target is horizontal `1280×720`. The editor scales to that size on upload; when the ratio does not match, it enlarges to fill and trims the overflow, so keep the subject near the center and important content away from the edges.
+- **Format and size**: `PNG`, `JPEG`, or `WebP`, under `4MB`. Prepare a source close to `1280×720`; a small image is enlarged and looks soft.
+- **Frame**: a complete horizontal key visual that summarizes the work. Do not include characters, endings, or plot facts you have not confirmed.
+- **Exclusions**: text, watermarks, logos, and extra subjects carry through to the player page.
+- **Prompt**: state that this is a script cover, the `1280×720` horizontal full frame, a centered subject, and the confirmed art style, and exclude text, watermarks, and accidental cropping.
 
 ### Write the summary
 
@@ -33,11 +53,38 @@ Use: who the player is → where they are → what problem is present → what t
 
 > You receive an undelivered letter at the Tidebound Post Office. The tide is rising, and its address points to the old pier that is still lit tonight. Find out who left it before the water reaches its highest mark.
 
-### Write the overview and story control
+### Write the overview
 
-For the overview, cover the work’s identity, opening situation, central question, tone, arc, and landing point. For story control, state what counts as a player action, which people and facts cannot be invented, what must happen before the next act, and what facts close the story.
+The overview is six short parts, each answering one question:
+
+1. **Work identity**: what topic and scale is this story?
+2. **Opening situation**: where does the player first appear, and what is already true?
+3. **Central question**: what should the work really make the player face?
+4. **Tone**: what are the pacing, distance, mood, and language like?
+5. **Narrative arc**: how do the facts change from the first unknown to the ending?
+6. **Landing point**: what does the ending deliver, and what should not be extended?
+
+Two or three sentences per part. State facts and direction first, then leave room for player action.
+
+### Write the story control
+
+Story control has four parts:
+
+1. **Player input handling**: which inputs count as something the player clearly said or did? Do not write lines, promises, or key actions the player did not choose.
+2. **Performance boundaries**: what are the limits of people, places, items, time, and danger? Which facts must not be invented?
+3. **Progression and waiting**: what must be finished before the next stage, and which key actions must the player take?
+4. **Freedom and closure**: which routes can vary, and which facts close the story into an ending?
 
 Example: the overview moves from a letter, to the salt mark, to the sender’s identity, and finally to a reply under the lighthouse. The story control says not to invent Shen Yao’s decisions and not to reveal the sender before the evidence is found.
+
+### Write the worldview
+
+Worldview is maintained as entries, each stating one shared fact that most relevant characters know, titled with the in-world name. It defines the rules, history, common knowledge, and boundaries the whole script can always rely on—when a phenomenon appears, who runs an institution, what customs everyone follows.
+
+- Put shared facts here: `The old pier lamp lights only when someone is landing`;
+- Keep private information and conditional conclusions out; those belong to [clues](/en/create/editor/clue) and [intelligence](/en/create/editor/intelligence);
+- Worldview is not **story background**: background is the narrative the player reads at the start, while worldview is knowledge that stays true across the work;
+- Worldview also does not replace **story control**, which covers response handling, performance boundaries, and closure.
 
 ## Story background
 
@@ -66,9 +113,33 @@ Opening text plays after the background. Recommended actions appear once at the 
 
 Do not write “you decide to investigate” in fixed opening text. Leave the first decision to the player.
 
+### Split the opening text
+
+Each entry carries one action or one piece of information:
+
+- **Narration**: place, action, sound, and observable facts;
+- **Character**: a line the character says at this moment;
+- **Content**: the text actually shown to the player.
+
+The opening presents only what has already happened. Do not write “you decide to investigate” or “you feel afraid”; leave the first decision to the player.
+
+### Write recommended actions
+
+Action style is the short button label; action copy is the complete action the player can send. Recommended actions should show what is possible now without deciding the story for the player. Selecting one sends it as this turn's input, so write it as a complete, executable action.
+
 ## Protagonist
 
 Choose a character truly controlled by the player. For this example, choose **Shen Yao** and either keep that name as the script’s name or let the player enter one with a prompt such as “How should others address you?”
+
+Common settings:
+
+- **Protagonist**: pick a character truly controlled by the player, not an observer or a backstage figure;
+- **Narrative perspective**: keep one perspective across the work, for example addressing the player as “you”;
+- **Name mode**: use the script's fixed name when the work depends on a fixed identity; let the player enter a name when immersion matters, and write a clear prompt.
+
+<Warning>
+  A character node selected as the protagonist keeps only its public profile (identity, gender, age) and act portraits. Core desire, breaking point, usual methods, public persona, and the three speaking-style fields you enter on the protagonist are removed by the platform on save and never reach the performance. Put any protagonist behavior rules in **story control** instead.
+</Warning>
 
 ## Before leaving this node
 
