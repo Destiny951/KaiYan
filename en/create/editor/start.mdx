@@ -27,7 +27,7 @@ This guide uses **Letter from Mist Harbor**: Shen Yao receives an undelivered le
 | Script overview | Six short layers describing the whole work | `A short modern mystery from a letter to a reply under the lighthouse.` | Not shown directly; keeps the story on course |
 | Story control | Rules for player input, boundaries, waiting, and closure | `Only confirmed player actions count; clue before intelligence; close after the reply.` | Not shown directly; shapes responses |
 | Worldview | Shared rules, history, common knowledge, and boundaries | `The old pier lamp lights only when someone is landing` | Not shown directly; constrains the whole performance |
-| Opening location | Where the player first enters the story | `Tidebound Post Office` | The setting is hidden; the player starts there, and an empty value falls back to the first location bound to the first act |
+| Opening location | Where the player first enters the story | `Tidebound Post Office` | The setting is hidden; the player starts there, and an empty value falls back to the first location bound to the first act; when filled in it must match the location bound to the first act |
 
 <Note>
   **Tags** are limited to the platform genres: Mystery, Xianxia, Campus, Fantasy, Romance, Workplace, Science fiction, Urban, Apocalypse, and Historical, with at most two selected. A term outside this list fails the test and review checks and blocks the workflow.
@@ -123,6 +123,8 @@ Each entry carries one action or one piece of information:
 
 The opening presents only what has already happened. Do not write “you decide to investigate” or “you feel afraid”; leave the first decision to the player.
 
+Every character who speaks in the opening text must already be listed under the first act's **Available characters**; otherwise the opening brings on someone the act never placed, and testing and review fail.
+
 ### Write recommended actions
 
 Action style is the short button label; action copy is the complete action the player can send. Recommended actions should show what is possible now without deciding the story for the player. Selecting one sends it as this turn's input, so write it as a complete, executable action.
@@ -143,6 +145,6 @@ Common settings:
 
 ## Before leaving this node
 
-Check that the summary makes sense alone, the background establishes place and problem, opening text states only facts, recommendations are executable, the entry connects to exactly one act, and the protagonist is clear.
+Check that the summary makes sense alone, the background establishes place and problem, opening text states only facts, recommendations are executable, the entry connects to exactly one act, and the protagonist is clear. Confirm that the opening location (when filled in) and every speaking character in the opening text belong to the first act.
 
 Next: [Act](/en/create/editor/act).

@@ -18,7 +18,7 @@ In **Letter from Mist Harbor**, the item is **Undelivered Letter**. Its salt mar
 | Field | What to write | Example | Player sees it where |
 | --- | --- | --- | --- |
 | Item name | A recognizable inventory name | `Undelivered Letter` | Inventory, item details, and story text |
-| Ownership | Who currently holds it | `Player` | It controls whether the item enters the inventory |
+| Ownership | The character holding it or the scene it sits in, choose one | `Player` | It controls whether the item enters the inventory |
 | Appearance | Details the player can observe | `The envelope edge is water-softened; a thin salt ring marks the seal.` | Item details |
 | Image | A visual identifier | `Old envelope with a salt mark` | Inventory tile and item details |
 | Acquisition | When and how it is obtained | `Inspect the register desk and choose to take the letter.` | It controls when the item appears |
@@ -57,9 +57,9 @@ Give the item one or two meaningful uses first:
 Interactions are background rules. The player sees the resulting text, character response, or change—not the field text.
 
 <Note>
-  Required field: item name. Ownership is a relation, not text: a character holds the item or it sits in a scene, never both. See [Required Fields and Blockers](/en/create/editor/required-fields).
+  Required field: item name. Ownership is a relation, not text: a character holds the item or it sits in a scene, never both. An item with neither never enters any act and blocks testing and review. See [Required Fields and Blockers](/en/create/editor/required-fields).
 </Note>
 
 ## Check it
 
-The name and image should identify the item, the appearance should contain observable details, and the acquisition action should be possible in a test session. Confirm that the item enters inventory and that its details or interaction appear as expected.
+The name and image should identify the item, the appearance should contain observable details, and the acquisition action should be possible in a test session. Confirm that the item enters inventory and that its details or interaction appear as expected. Connect ownership first: an item is held by a character or placed in a scene.

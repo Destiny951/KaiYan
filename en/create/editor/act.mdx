@@ -20,9 +20,21 @@ In **Letter from Mist Harbor**, the first act is **Tide Before Midnight**. It ta
 | Act name | A name that makes the stage easy to identify | `Tide Before Midnight` | Usually not shown as a page title |
 | Main route | The previous and next connection | `Entry → Tide Before Midnight → Whether to Visit the Old Pier` | The player enters the connected stage |
 | Available characters | People who may appear in this act | `Lin Zhou` | The player can meet these characters |
+| Not appearing in this act | People who already appeared at this act's location in an earlier act but are not in this act | `Zhou` | The player does not meet them here; binding them again in a later act brings them back |
 | Available locations | Places allowed in the act | `Tidebound Post Office` | The player can use the location |
 | Progress direction | The causal change this stage must create | `Move from receiving the letter to confirming the sender is still in the harbor.` | Appears through scenes and actions |
 | Closure basis | Observable facts and what the next stage inherits | `The salt mark is found; the next stage inherits the old-pier direction.` | The story moves on without inventing a jump |
+
+### Declare every character at the same location
+
+When this act shares its location with an earlier act that already brought a character on stage, this act must place them:
+
+- They appear here: add them to **Available characters** and fill in their act goal;
+- They do not appear here: add them to **Not appearing in this act**.
+
+Leaving both empty blocks **Test** and **Submit for Review**: the runtime still treats them as present at this location while this act has not placed them.
+
+**Not appearing in this act** applies to this act only. Add the character back to **Available characters** in a later act and they return; you do not need to remove the declaration first. It means “they are already gone when this act starts” and does not require staging a departure here — write the departure in the act where it actually happens.
 
 ### Write the progress direction
 

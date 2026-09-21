@@ -33,7 +33,9 @@ Beyond fields, the editor checks how nodes connect:
 - Every act needs a main-route exit, and every route must eventually reach an ending;
 - Intelligence must have a single reveal act;
 - A status component must bind a single character;
-- An item belongs either to a character or to a scene, not both;
+- An item must belong to a character or to a scene: an item with neither, or with both, blocks testing and review;
+- Every character who already appeared at this location in an earlier act must be placed here: list them under **Available characters** when they appear, or under **Not appearing in this act** when they do not;
+- A filled-in **Opening location** must be the location bound to the first act, and every character who speaks in the opening text must be listed under the first act's **Available characters**;
 - A clue has exactly one source: an act, a character, or an item.
 
 Fix the story structure rather than swapping connection directions just to pass the check. See [Node Connections](/en/create/editor/connections) for the full direction and exclusivity rules.
